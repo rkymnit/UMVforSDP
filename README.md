@@ -1,2 +1,17 @@
 # UMVforSDP
 An unsupervised Software Defect Prediction System in Functional Paradigm
+
+
+We have developed a primary script named "UMV_SDP_Main.R" to implement our proposed approach. Within this script, we handle tasks such as dataset reading and developing unsupervised majority voting (UMV) ensemble technique. UMV technique consists of the following steps: 1. Reducing the skewness of the SMs using three transformation techniques; 2. Calculating software metrics threshold; 3. Clustering and Labeling; 4. Metric selection and instance selection; 5. Machine learning model building and prediction; 6. Majority voting ensemble. Additionally, we have included the script "UMV_SDP_Main_Compare.R" for implementing the five standard supervised machine learning models (NB, SVM, KNN, RF, C5.0), four unsupervised machine learning models (KMS, NGC, HC, MBC) and six threshold based unsupervised SDP models (CLAMI, CLAMI+, ACL, TCLP, SQRT, CBRT). These supervised/unsupervised and threshold-based models encompass a range of machine-learning classification techniques, namely:
+
+Naive Bayes (NB), Support vector machine with RBF kernel (SVM), K-nearest neighbor (KNN), Random forest (RF), C5.0 (C50), K-means (KMS), Neural gas clustering (NGC), Hierarchical clustering (HC), Model-based clustering (MBC). The main script "UMV_SDP_Main.R" serves as the entry point for implementing these methods.
+
+Each machine learning algorithm model information is provided to a script with a ".R" extension, like "NB.r" for Naive Bayes, "svmRadial.r" for Support vector machine with RBF kernel, "KNN.r" for K-nearest neighbor, and so on. Running the main script on a specific dataset generates performance metrics such as Accuracy, F-measure (FM), and Mathews Correlation Coefficient (MCC).
+
+Procedure: The implementation procedure involves the following key steps: Initially, select Haskell datasets from a datasets folder and then create unlabeled datasets. Apply the UMV model to predict outcomes on the original datasets.
+
+The proposed approach UMV is an unsupervised software defect prediction model based on an unlabeled Haskell dataset. The key idea of our proposed technique is to select effective transformation techniques to reduce the skewness of the datasets and then calculate the software metrics threshold. After that, perform clustering and labeling. Then, it performs metric selection and instance selection. Based on filtered datasets, prepare the machine learning models and predict on original datasets, then apply majority voting ensemble techniques for the final prediction of the defect in each function of the datasets. This key idea is accomplished with the following steps. 1. Reducing the skewness of the SMs using three transformation techniques; 2. Calculating software metrics threshold; 3. Clustering and Labeling; 4. Metric selection and instance selection; 5. Machine learning model building and prediction; 6. Majority voting ensemble.
+
+Additional scripts and resources related to box plots, critical diagrams, and figures are available in separate folders, accompanied by corresponding supporting R file scripts.the SMs using three transformation techniques; 2. Calculating software metrics threshold; 3. Clustering and Labeling; 4. Metric selection and instance selection; 5. Machine learning model building and prediction; 6. Majority voting ensemble.
+
+Additional scripts and resources related to box plots, critical diagrams, and figures are available in separate folders, accompanied by corresponding supporting R file scripts.
